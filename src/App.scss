@@ -1,0 +1,172 @@
+@import "./styles/colors.scss";
+@import "./styles/font.scss";
+
+.App {
+  text-align: center;
+  color: $primary-dark;
+  font-family: $font-main;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em 6em;
+
+  h1,
+  p {
+    font-family: Lato;
+  }
+
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+
+    // width: 100%;
+    table-layout: fixed;
+  }
+
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 1700px) {
+    padding: 2em 3em;
+
+    table {
+      border: 0;
+      align-items: center;
+      justify-content: center;
+    }
+
+    table caption {
+      font-size: 2em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+  // table {
+  //   width: 100%;
+  //   border-collapse: collapse;
+  //   position: relative;
+
+  //   thead {
+  //     tr {
+  //       th {
+  //         font-weight: 500;
+  //         text-align: center;
+  //         background-color: #fafafa;
+  //       }
+  //     }
+  //   }
+
+  //   tbody {
+  //     tr:nth-child(even) {
+  //       background-color: #fafafa;
+  //     }
+  //   }
+
+  //   th,
+  //   td {
+  //     padding: 8px;
+  //     overflow-wrap: break-word;
+  //   }
+
+  // }
+
+  .pagination-bar {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
